@@ -1,0 +1,205 @@
+/*-----------------------------------------------------------------------------------*/
+/*	MAIN COLOR
+/*-----------------------------------------------------------------------------------*/
+#preloader .textload {
+	color: #FECE1C;
+}
+a {
+    color: #FECE1C;
+}
+a.line:hover {
+    border-bottom: 1px solid #FECE1C;
+}
+a:hover,
+a:focus {
+    color: #FECE1C;
+}
+
+.post-title a:hover {
+    color: #FECE1C
+}
+.section-title span {
+	color: #FECE1C
+}
+.meta a:hover,
+.more:hover {
+	color: #FECE1C
+}
+ul.circled li:before {
+    color: #FECE1C;
+}
+.contact-info i {
+    color: #FECE1C;
+}
+.contact-info a:hover {
+    color: #FECE1C
+}
+.btn,
+.vanilla-form label.custom-select span {
+    background: #FECE1C;
+}
+.navbar .nav > li.current > a,
+.navbar .navbar-nav > li > a:focus,
+.navbar .nav > li > a:hover {
+    color: #FECE1C !important 
+}
+.navbar .dropdown-menu li:first-child {
+    border-top: 2px solid #FECE1C
+}
+.navbar .dropdown-menu li a:hover,
+.navbar .dropdown-menu li a.active,
+.navbar .nav .open > a,
+.navbar .nav .open > a:hover,
+.navbar .nav .open > a:focus,
+.navbar .dropdown-menu > li > a:hover,
+.navbar .dropdown-menu > li > a:focus,
+.navbar .dropdown-submenu:hover > a,
+.navbar .dropdown-submenu:focus > a,
+.navbar .dropdown-menu > .active > a,
+.navbar .dropdown-menu > .active > a:hover,
+.navbar .dropdown-menu > .active > a:focus {
+    color: #FECE1C;
+}
+.cbp-filter-container .cbp-filter-item:hover,
+.cbp-filter-container .cbp-filter-item.cbp-filter-item-active,
+.sticky-filter ul li a:hover,
+.sticky-filter ul li.current a {
+    color: #FECE1C !important;
+}
+.item-details li strong {
+    color: #FECE1C;
+}
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+	color: #FECE1C
+}
+.sidebox a:hover {
+    color: #FECE1C
+}
+.widget .post-list h5 a:hover {
+    color: #FECE1C
+}
+.widget .post-list .meta em a:hover {
+    color: #FECE1C
+}
+footer ul.tag-list li a:hover {
+    background: #FECE1C !important;
+}
+.sidebox ul.tag-list li a:hover {
+    color: #FECE1C !important;
+}
+.blog-carousel .caption-overlay .caption .post-title a:hover {
+	color: #FECE1C;
+}
+.blog-carousel .caption-overlay .caption .meta a:hover {
+	color: #FECE1C;
+}
+.progress-list li em {
+    color: #FECE1C;
+}
+.progress.plain .bar {
+    background: #FECE1C !important;
+}
+.feature .icon {
+    color: #FECE1C
+}
+.icon-large {
+    color: #FECE1C;
+}
+.tabs-top .tab a:hover,
+.tabs-top .tab.active a {
+    background: #FECE1C;
+}
+.panel-group .panel-heading .panel-title:hover,
+.panel-group .panel-active .panel-heading .panel-title {
+    background: #FECE1C;
+}
+.price {
+    color: #FECE1C;
+}
+.tooltip-inner {
+    background-color: #FECE1C;
+}
+.tooltip.top .tooltip-arrow,
+.tooltip.top-left .tooltip-arrow,
+.tooltip.top-right .tooltip-arrow {
+    border-top-color: #FECE1C
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: #FECE1C
+}
+.tooltip.left .tooltip-arrow {
+    border-left-color: #FECE1C
+}
+.tooltip.bottom .tooltip-arrow,
+.tooltip.bottom-left .tooltip-arrow,
+.tooltip.bottom-right .tooltip-arrow {
+    border-bottom-color: #FECE1C
+}
+#comments .info h2 a:hover {
+    color: #FECE1C
+}
+.vanilla-form input[type="radio"]:focus + span,
+.vanilla-form input[type="checkbox"]:focus + span,
+.vanilla-form input[type="radio"]:active + span,
+.vanilla-form input[type="checkbox"]:active + span {
+    border-color: #FECE1C
+}
+.vanilla-form input[type="radio"] + span::after {
+    background-color: #FECE1C;
+    border-color: #FECE1C;
+}
+.vanilla-form input[type="radio"]:checked + span,
+.vanilla-form input[type="checkbox"]:checked + span {
+    border: 1px solid #FECE1C
+}
+.vanilla-form input[type="checkbox"] + span::after {
+    border: 0 solid #FECE1C;
+}
+@media (min-width: 992px) { 
+	.navbar .dropdown-menu:before {
+	    border-bottom: 5px solid #FECE1C;
+	}
+}
+@media (max-width: 991px) {
+	.navbar .nav > li.current > a,
+	.navbar .nav > li > a:hover {
+	    color: #FECE1C !important
+	}
+	.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar .navbar-nav .open .dropdown-menu > li > a:focus {
+	    color: #FECE1C !important
+	}
+}
+/*-----------------------------------------------------------------------------------*/
+/*	HOVER
+/*-----------------------------------------------------------------------------------*/
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+    background: #51a7b6;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	RGBA
+/*-----------------------------------------------------------------------------------*/
+.spinner,
+.tp-loader.spinner0,
+.cbp-popup-singlePageInline:before,
+#fancybox-loading div {
+    border-left: 3px solid rgba(98, 184, 200,.15);
+    border-right: 3px solid rgba(98, 184, 200,.15);
+    border-bottom: 3px solid rgba(98, 184, 200,.15);
+    border-top: 3px solid rgba(98, 184, 200,.8);
+}
+/*-----------------------------------------------------------------------------------*/
+/*	SELECTION
+/*-----------------------------------------------------------------------------------*/
+::selection {
+    background: #cae5ec; /* Safari */
+}
+::-moz-selection {
+    background: #cae5ec; /* Firefox */
+}
