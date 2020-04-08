@@ -1,0 +1,96 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+  </p>
+</figure>
+
+
+<style>
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 100%; 
+    max-width: 100%;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+</style>
+
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%'
+    },
+    title: {
+        text: 'Inclusive relation of nodes (user type by faculty), cumulated from 03/09/2018/-09'
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.value} nodes'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '10%',
+            maxSize: '100%',
+            zMin: 0,
+            zMax: 30000,
+            layoutAlgorithm: {
+                gravitationalConstant: 0.05,
+                splitSeries: true,
+                seriesInteraction: false,
+                dragBetweenSeries: true,
+                parentNodeLimit: true
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name} <br> {point.value} <br> ({point.faculty}) ',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 0
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
+        }
+    },
+  series:[{'name': 'BIZ', 'data': [{'name': 'student', 'value': 25366, 'faculty': 'BIZ'}, {'name': 'staff', 'value': 7537, 'faculty': 'BIZ'}, {'name': 'guest', 'value': 2194, 'faculty': 'BIZ'}, {'name': 'eduroam', 'value': 1137, 'faculty': 'BIZ'}]}, {'name': 'CCELIB', 'data': [{'name': 'student', 'value': 23021, 'faculty': 'CCELIB'}, {'name': 'staff', 'value': 7840, 'faculty': 'CCELIB'}, {'name': 'eduroam', 'value': 709, 'faculty': 'CCELIB'}, {'name': 'guest', 'value': 461, 'faculty': 'CCELIB'}]}, {'name': 'FASS', 'data': [{'name': 'student', 'value': 55258, 'faculty': 'FASS'}, {'name': 'staff', 'value': 8730, 'faculty': 'FASS'}, {'name': 'eduroam', 'value': 1748, 'faculty': 'FASS'}, {'name': 'guest', 'value': 861, 'faculty': 'FASS'}]}, {'name': 'FOE', 'data': [{'name': 'student', 'value': 50867, 'faculty': 'FOE'}, {'name': 'staff', 'value': 26376, 'faculty': 'FOE'}, {'name': 'eduroam', 'value': 1883, 'faculty': 'FOE'}, {'name': 'guest', 'value': 1588, 'faculty': 'FOE'}]}, {'name': 'MED', 'data': [{'name': 'student', 'value': 40888, 'faculty': 'MED'}, {'name': 'staff', 'value': 26748, 'faculty': 'MED'}, {'name': 'guest', 'value': 1682, 'faculty': 'MED'}, {'name': 'eduroam', 'value': 1586, 'faculty': 'MED'}]}, {'name': 'SCI', 'data': [{'name': 'student', 'value': 47434, 'faculty': 'SCI'}, {'name': 'staff', 'value': 17911, 'faculty': 'SCI'}, {'name': 'eduroam', 'value': 2352, 'faculty': 'SCI'}, {'name': 'guest', 'value': 1235, 'faculty': 'SCI'}]}, {'name': 'SDE', 'data': [{'name': 'student', 'value': 16587, 'faculty': 'SDE'}, {'name': 'staff', 'value': 3173, 'faculty': 'SDE'}, {'name': 'guest', 'value': 452, 'faculty': 'SDE'}, {'name': 'eduroam', 'value': 347, 'faculty': 'SDE'}]}, {'name': 'UTown', 'data': [{'name': 'student', 'value': 50324, 'faculty': 'UTown'}, {'name': 'staff', 'value': 4367, 'faculty': 'UTown'}, {'name': 'guest', 'value': 2776, 'faculty': 'UTown'}, {'name': 'eduroam', 'value': 1531, 'faculty': 'UTown'}]}, {'name': 'YIH', 'data': [{'name': 'student', 'value': 9186, 'faculty': 'YIH'}, {'name': 'staff', 'value': 2559, 'faculty': 'YIH'}, {'name': 'guest', 'value': 295, 'faculty': 'YIH'}, {'name': 'eduroam', 'value': 292, 'faculty': 'YIH'}]}, {'name': 'YSTCM', 'data': [{'name': 'student', 'value': 5245, 'faculty': 'YSTCM'}, {'name': 'staff', 'value': 2195, 'faculty': 'YSTCM'}, {'name': 'guest', 'value': 1253, 'faculty': 'YSTCM'}, {'name': 'eduroam', 'value': 177, 'faculty': 'YSTCM'}]}]
+
+
+});
+
+</script>

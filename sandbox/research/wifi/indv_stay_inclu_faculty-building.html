@@ -1,0 +1,98 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+  </p>
+</figure>
+
+
+<style>
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 100%; 
+    max-width: 100%;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+</style>
+
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%'
+    },
+    title: {
+        text: 'Inclusive relation of nodes staying up (user type by faculty), cumulated from 03/09/2018/-09'
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.value} nodes'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '20%',
+            maxSize: '400%',
+            zMin: 0,
+            zMax: 5000,
+            layoutAlgorithm: {
+                gravitationalConstant: 0.05,
+                splitSeries: true,
+                seriesInteraction: false,
+                dragBetweenSeries: true,
+                parentNodeLimit: true
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name} <br> {point.value} <br> ({point.faculty}) ',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 0
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
+        }
+    },
+series:[{'name': 'BIZ', 'data': [{'name': 'FBALAW-I3', 'value': 258, 'faculty': 'BIZ'}, {'name': 'FBALAW-MochtarRiyady', 'value': 57, 'faculty': 'BIZ'}]}, {'name': 'CCELIB', 'data': [{'name': 'CCELIB-CC', 'value': 105, 'faculty': 'CCELIB'}, {'name': 'CCELIB-S2S', 'value': 10, 'faculty': 'CCELIB'}, {'name': 'CCELIB-CDTL', 'value': 8, 'faculty': 'CCELIB'}, {'name': 'CCELIB-KR12A', 'value': 7, 'faculty': 'CCELIB'}, {'name': 'CCELIB-Central Library', 'value': 5, 'faculty': 'CCELIB'}]}, {'name': 'FASS', 'data': [{'name': 'ARTS-AS7', 'value': 37, 'faculty': 'FASS'}, {'name': 'ARTS-AS5', 'value': 34, 'faculty': 'FASS'}, {'name': 'ARTS-AS1', 'value': 32, 'faculty': 'FASS'}, {'name': 'ARTS-AS2', 'value': 27, 'faculty': 'FASS'}, {'name': 'ARTS-AS4', 'value': 27, 'faculty': 'FASS'}, {'name': 'ARTS-AS3', 'value': 16, 'faculty': 'FASS'}, {'name': 'ARTS-AS6', 'value': 11, 'faculty': 'FASS'}, {'name': 'LT15', 'value': 4, 'faculty': 'FASS'}, {'name': 'ARTS-Canteen', 'value': 1, 'faculty': 'FASS'}, {'name': 'LT14', 'value': 1, 'faculty': 'FASS'}, {'name': 'LT8', 'value': 1, 'faculty': 'FASS'}]}, {'name': 'FOE', 'data': [{'name': 'ENGADM-E4', 'value': 185, 'faculty': 'FOE'}, {'name': 'ENGADM-TLAB', 'value': 127, 'faculty': 'FOE'}, {'name': 'ENGADM-E3A', 'value': 89, 'faculty': 'FOE'}, {'name': 'AKIENG-E1', 'value': 79, 'faculty': 'FOE'}, {'name': 'ENGADM-EA', 'value': 71, 'faculty': 'FOE'}, {'name': 'ENGADM-E4A', 'value': 69, 'faculty': 'FOE'}, {'name': 'ENGADM-E1A', 'value': 64, 'faculty': 'FOE'}, {'name': 'AKIENG-E3', 'value': 62, 'faculty': 'FOE'}, {'name': 'AKIENG-E2', 'value': 61, 'faculty': 'FOE'}, {'name': 'ENGADM-EW1', 'value': 39, 'faculty': 'FOE'}, {'name': 'ENGADM-E5', 'value': 30, 'faculty': 'FOE'}, {'name': 'AKIENG-EW2', 'value': 8, 'faculty': 'FOE'}, {'name': 'AKIENG-CELC', 'value': 6, 'faculty': 'FOE'}, {'name': 'LT2', 'value': 3, 'faculty': 'FOE'}, {'name': 'LT5', 'value': 1, 'faculty': 'FOE'}]}, {'name': 'MED', 'data': [{'name': 'MEDNUH-MD6', 'value': 232, 'faculty': 'MED'}, {'name': 'MEDNUH-CELS', 'value': 66, 'faculty': 'MED'}, {'name': 'MEDNUH-MD1', 'value': 62, 'faculty': 'MED'}, {'name': 'MEDNUH-MD11', 'value': 30, 'faculty': 'MED'}, {'name': 'MEDNUH-MD9', 'value': 11, 'faculty': 'MED'}, {'name': 'MEDNUH-MD4', 'value': 10, 'faculty': 'MED'}, {'name': 'MEDNUH-FOD', 'value': 9, 'faculty': 'MED'}, {'name': 'MEDNUH-MD3', 'value': 9, 'faculty': 'MED'}, {'name': 'MEDNUH-MD7', 'value': 8, 'faculty': 'MED'}, {'name': 'MEDNUH-MD10', 'value': 7, 'faculty': 'MED'}, {'name': 'MEDNUH-MD5', 'value': 1, 'faculty': 'MED'}]}, {'name': 'SCI', 'data': [{'name': 'SCIYIH-S16', 'value': 105, 'faculty': 'SCI'}, {'name': 'SCIYIH-S17', 'value': 102, 'faculty': 'SCI'}, {'name': 'SCIPGP-S1A', 'value': 56, 'faculty': 'SCI'}, {'name': 'SCIPGP-S5', 'value': 47, 'faculty': 'SCI'}, {'name': 'SCIYIH-S13', 'value': 36, 'faculty': 'SCI'}, {'name': 'SCIPGP-S2', 'value': 32, 'faculty': 'SCI'}, {'name': 'SCIYIH-S12', 'value': 32, 'faculty': 'SCI'}, {'name': 'SCIYIH-S15', 'value': 28, 'faculty': 'SCI'}, {'name': 'SCIYIH-S14', 'value': 26, 'faculty': 'SCI'}, {'name': 'SCIYIH-S7', 'value': 23, 'faculty': 'SCI'}, {'name': 'SCIPGP-S8', 'value': 21, 'faculty': 'SCI'}, {'name': 'SCIPGP-S3', 'value': 17, 'faculty': 'SCI'}, {'name': 'SCIPGP-S6', 'value': 10, 'faculty': 'SCI'}, {'name': 'SCIPGP-S4A', 'value': 6, 'faculty': 'SCI'}, {'name': 'SCIPGP-S4', 'value': 2, 'faculty': 'SCI'}, {'name': 'LT20', 'value': 1, 'faculty': 'SCI'}, {'name': 'SCIYIH-S11', 'value': 1, 'faculty': 'SCI'}]}, {'name': 'SDE', 'data': [{'name': 'AKIENG-SDE3', 'value': 309, 'faculty': 'SDE'}, {'name': 'AKIENG-SDE2', 'value': 32, 'faculty': 'SDE'}, {'name': 'AKIENG-SDE1', 'value': 1, 'faculty': 'SDE'}]}, {'name': 'UTown', 'data': [{'name': 'UTown-ERC', 'value': 935, 'faculty': 'UTown'}, {'name': 'UT01-RC4-MPH', 'value': 121, 'faculty': 'UTown'}, {'name': 'UTown25', 'value': 74, 'faculty': 'UTown'}, {'name': 'UTown-TLL', 'value': 72, 'faculty': 'UTown'}, {'name': 'UTown-Tembusu', 'value': 47, 'faculty': 'UTown'}, {'name': 'UTown-Cinanmon', 'value': 44, 'faculty': 'UTown'}, {'name': 'UT03-Dining Hall', 'value': 26, 'faculty': 'UTown'}, {'name': 'UTown-GRN', 'value': 20, 'faculty': 'UTown'}, {'name': 'UTown-CMPH', 'value': 15, 'faculty': 'UTown'}, {'name': 'UTown-CREATE', 'value': 8, 'faculty': 'UTown'}, {'name': 'UTown-TMPH', 'value': 5, 'faculty': 'UTown'}, {'name': 'UTown-GRS', 'value': 2, 'faculty': 'UTown'}]}, {'name': 'YIH', 'data': [{'name': 'SCIYIH-YIH', 'value': 69, 'faculty': 'YIH'}, {'name': 'SCIYIH-UHC', 'value': 26, 'faculty': 'YIH'}]}, {'name': 'YSTCM', 'data': [{'name': 'ENGADM-YSTCM', 'value': 61, 'faculty': 'YSTCM'}, {'name': 'ENGADM-UCC', 'value': 29, 'faculty': 'YSTCM'}]}]
+
+
+
+
+});
+
+</script>
