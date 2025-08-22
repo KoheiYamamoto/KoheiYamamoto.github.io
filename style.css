@@ -25,6 +25,37 @@
     color: #ffffff;
 }
 
+/* Experience section alignment styles */
+#experience ul {
+    list-style: none;
+    padding: 0;
+}
+
+#experience ul li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+#experience ul li:before {
+    content: '';
+    display: none;
+}
+
+.experience-year {
+    min-width: 140px;
+    flex-shrink: 0;
+    font-weight: bold;
+    margin-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+.experience-title {
+    flex: 1;
+}
+
 /*-------------------------------------------------------------------------------------
 [TABLE OF CONTENTS]
 
